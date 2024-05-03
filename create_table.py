@@ -9,14 +9,14 @@ def create_table(path: str = './database.db'):
             CREATE TABLE IF NOT EXISTS users (
                 id INTEGER PRIMARY KEY,
                 fullname VARCHAR(100),
-                email VARCHAR(100) unique
+                email VARCHAR(100) UNIQUE
             )
         ''')
 
         cur.execute('''
             CREATE TABLE IF NOT EXISTS status (
                 id INTEGER PRIMARY KEY,
-                name VARCHAR(50)
+                name VARCHAR(50) UNIQUE
             )
         ''')
 
